@@ -18,6 +18,7 @@ class XmppBot extends Adapter
     @robot.logger.info util.inspect(options)
 
     @client = new Xmpp.Client
+      reconnect: true
       jid: options.username
       password: options.password
       host: options.host
